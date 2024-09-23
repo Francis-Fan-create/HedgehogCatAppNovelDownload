@@ -1,6 +1,6 @@
 import json
 import time
-from Crypto.Cipher import AES
+from Cryptodome.Cipher import AES
 import base64
 import hashlib
 from rich import print
