@@ -47,7 +47,7 @@ def shell_login(inputs):  # invalid login
         if response.get('code') == '100000':
             Vars.cfg.data['common_params'] = {
                 'account': response['data']['reader_info']['account'],
-                'login_token': response['data']['login_token'], 'app_version': '2.9.290'
+                'login_token': response['data']['login_token'], 'app_version': '2.9.331'
             }
             Vars.cfg.save()
             print('登录成功, 当前用户昵称为:', HbookerAPI.SignUp.user_account())
@@ -134,7 +134,7 @@ def update_config():
         Vars.cfg.data['backups_local_cache'] = True
     if not isinstance(Vars.cfg.data.get('common_params'), dict):
         Vars.cfg.data['common_params'] = {
-            'login_token': "", 'account': "", 'app_version': '2.9.290', 'device_token': 'ciweimao_'}
+            'login_token': "", 'account': "", 'app_version': '2.9.331', 'device_token': 'ciweimao_'}
     Vars.cfg.save()
 
 
@@ -203,7 +203,7 @@ def new_shell_login(frequency=0):
 #             if response.get('code') == '100000':
 #                 Vars.cfg.data['common_params'] = {
 #                     'account': response['data']['reader_info']['account'],
-#                     'login_token': response['data']['login_token'], 'app_version': '2.9.290'
+#                     'login_token': response['data']['login_token'], 'app_version': '2.9.331'
 #                 }
 #                 Vars.cfg.save()
 #                 print("账号:", HbookerAPI.SignUp.user_account(), "自动登入成功！")
